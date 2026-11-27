@@ -1,0 +1,40 @@
+name: 저장소 간 계약 변경
+description: API, Kafka, SSE 또는 공용 스키마의 변경을 조율합니다.
+title: "[Chore] "
+body:
+  - type: textarea
+    id: progress
+    attributes:
+      label: 진행 체크리스트
+      description: 한 PR에서 완료할 작업을 체크리스트로 적어 주세요.
+      placeholder: "- [ ] 작업 항목"
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: 변경 전후와 예시
+      description: 계약 이름, 버전, 변경 필드와 대표 요청·응답 또는 이벤트 예시를 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: consumers
+    attributes:
+      label: 제공자와 소비자
+      description: 담당자, 영향받는 저장소와 연결 이슈를 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: rollout
+    attributes:
+      label: 호환성과 적용 순서
+      description: 구버전 동작, 병합·배포 순서와 되돌리는 방법을 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 계약의 수용 기준
+      description: 제공자와 소비자가 확인할 입력, 결과 및 실패 사례를 적어 주세요.
+    validations:
+      required: true
